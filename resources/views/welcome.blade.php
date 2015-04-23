@@ -41,7 +41,6 @@
 		<div class="container">
 			<div class="content">
 				<div class="title">BLVDIA</div>
-				<div class="quote">{{ Inspiring::quote() }}</div>
 			</div>
 		</div>
 	</body>
