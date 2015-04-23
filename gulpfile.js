@@ -1,4 +1,5 @@
 var elixir = require('laravel-elixir');
+elixir.config.sourcemaps = false;
 
 /*
  |--------------------------------------------------------------------------
@@ -12,5 +13,15 @@ var elixir = require('laravel-elixir');
  */
 
 elixir(function(mix) {
-    mix.less('app.less');
+    mix.scripts([
+        'jquery/dist/jquery.min.js',
+        'angular/angular.min.js'
+    ], 'public/js/vendor.js', 'resources/lib');
+});
+
+elixir(function(mix) {
+    mix.scripts([
+        'module.js',
+        'controllers.js'
+    ], 'public/js/app.js', 'resources/assets/js');
 });
