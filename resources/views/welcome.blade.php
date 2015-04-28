@@ -1,47 +1,35 @@
-<html>
-	<head>
-		<title>Laravel</title>
-		
-		<link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
+@extends('layout')
 
-		<style>
-			body {
-				margin: 0;
-				padding: 0;
-				width: 100%;
-				height: 100%;
-				color: #B0BEC5;
-				display: table;
-				font-weight: 100;
-				font-family: 'Lato';
-			}
+@section('title')
+Welcome to Boulevardia
+@stop
 
-			.container {
-				text-align: center;
-				display: table-cell;
-				vertical-align: middle;
-			}
+@section('content')
 
-			.content {
-				text-align: center;
-				display: inline-block;
-			}
+<div class="container hidden-xs hidden-sm">
+    <div class="row">
+        <div class="col-xs-6 col-xs-offset-3">
+            <img src="/img/blvdia-banner.png" class="img-responsive" alt="BLVDIA">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-6 col-xs-offset-3">
+            <p class="text-center">This is really more of a phone thing.</p>
+        </div>
+    </div>
+</div>
 
-			.title {
-				font-size: 96px;
-				margin-bottom: 40px;
-			}
+<div class="container hidden-lg hidden-md">
+    <div class="row">
+        <div class="col-xs-12">
+            <img src="/img/blvdia-banner.png" class="img-responsive" alt="BLVDIA">
+        </div>
+    </div>
+    <div class="welcome"><span>Welcome to the</span><br>#BLVDIA passport office</div>
+    <p>Declare and share your proof of citizenship to our country within a country.</p>
+    <p>No oaths are required; simply choose from one of the six stations and enter the code from that station to begin.</p>
+    <input type="text" class="form-control">
+    <button class="btn btn-block margin-top">Get Started</button>
+</div>
 
-			.quote {
-				font-size: 24px;
-			}
-		</style>
-	</head>
-	<body>
-		<div class="container">
-			<div class="content">
-				<div class="title">BLVDIA</div>
-			</div>
-		</div>
-	</body>
-</html>
+@stop

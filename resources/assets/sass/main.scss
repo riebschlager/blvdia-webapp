@@ -1,0 +1,39 @@
+@import "includes/variables";
+@import "../../lib/bootstrap-sass/assets/stylesheets/bootstrap";
+
+html, body {
+  background-color: #f5e3be;
+}
+
+.margin-top {
+  margin-top: 30px;
+}
+
+p {
+  color: #956a25;
+  font-size: 16px;
+}
+
+.btn {
+  text-transform: uppercase;
+  background-color: #05674e;
+  border: 2px solid #0092a7;
+  color: #e0c393;
+  &:hover {
+    color: #e0c393;
+  }
+}
+
+.welcome {
+  text-transform: uppercase;
+  background-color: #0092a7;
+  text-align: center;
+  color: #f5e3be;
+  font-size: 26px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  span {
+    font-size: 16px;
+  }
+  padding: 5px;
+}
