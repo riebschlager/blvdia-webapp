@@ -3,3 +3,4 @@
 .env
 /resources/lib
 .DS_Store
+/layout
