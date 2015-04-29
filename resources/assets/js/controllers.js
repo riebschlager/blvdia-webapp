@@ -1,6 +1,7 @@
 angular.module('BlvdiaApp')
     .controller('BlvdiaCtrl', ['$scope', '$log',
         function ($scope, $log) {
+            document.getElementById('code').focus();
             var camera = {};
             var cameras = [{
                 name: 'One',
