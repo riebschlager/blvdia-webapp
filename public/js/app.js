@@ -30,7 +30,16 @@ angular.module('BlvdiaApp')
                 code: '5'
             }];
             $scope.armed = false;
-            $scope.badPassword = false;
+            $scope.checkPassword = function () {
+                var isPasswordGood = false;
+                _.each(cameras, function (camera, index) {
+                    if (camera.code === $scope.code) {
+                        isPasswordGood = true;
+                        $scope.camera = cameras[index];
+                    }
+                });
+                return isPasswordGood;
+            };
             $scope.getStarted = function () {
                 if (codes.indexOf($scope.code) > -1) {
                     $scope.camera = codes.indexOf($scope.code);

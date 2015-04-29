@@ -5,7 +5,8 @@ elixir(function (mix) {
 
     mix.scripts([
     'jquery/dist/jquery.min.js',
-    'angular/angular.min.js'
+    'angular/angular.min.js',
+    'underscore/underscore-min.js'
     ], 'public/js/vendor.js', 'resources/lib');
 
     mix.scripts([
@@ -18,5 +19,6 @@ elixir(function (mix) {
     });
 
     mix.copy('resources/lib/angular/angular.min.js.map', 'public/js/angular.min.js.map');
+    mix.copy('resources/lib/underscore/underscore-min.map', 'public/js/underscore-min.map');
 
 });

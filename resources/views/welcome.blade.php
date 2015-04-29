@@ -34,9 +34,8 @@ Welcome to Boulevardia
         <div class="welcome"><span>Welcome to the</span><br>#BLVDIA passport office</div>
         <p>Declare and share your proof of citizenship to our country within a country.</p>
         <p>No oaths are required; simply choose from one of the six stations and enter the code from that station to begin.</p>
-        <p class="bad-password" ng-show="badPassword">Bad Code</p>
-        <input type="text" class="form-control" ng-model="code" ng-change="badPassword = false">
-        <button class="btn btn-block margin-top" ng-click="getStarted()">Get Started</button>
+        <input type="text" class="form-control" ng-model="code" ng-change="checkPassword()">
+        <button class="btn btn-block margin-top" ng-click="getStarted()" ng-show="checkPassword()">Get Started</button>
     </div>
     <div ng-show="armed">
         <p>You're good to go!</p>
