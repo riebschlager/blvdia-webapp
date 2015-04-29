@@ -24,7 +24,7 @@ Welcome to Boulevardia
     </div>
 </div>
 
-<div ng-app="BlvdiaApp" ng-controller="BlvdiaCtrl" class="container hidden-lg hidden-md">
+<div ng-app="BlvdiaApp" ng-controller="BlvdiaCtrl" ng-cloak class="container hidden-lg hidden-md">
     <div class="row">
         <div class="col-xs-12">
             <img src="/img/blvdia-banner.png" class="img-responsive" alt="BLVDIA">

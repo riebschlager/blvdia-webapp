@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/main.css">
     <style>[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {display: none !important;}</style>
 </head>
-<body ng-cloak>
+<body>
 @yield('content')
 @yield('scripts')
 </body>
