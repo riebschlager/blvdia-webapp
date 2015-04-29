@@ -4,6 +4,11 @@
 Welcome to Boulevardia
 @stop
 
+@section('scripts')
+<script src="/js/vendor.js"></script>
+<script src="/js/app.js"></script>
+@stop
+
 @section('content')
 
 <div class="container hidden-xs hidden-sm">
@@ -19,17 +24,23 @@ Welcome to Boulevardia
     </div>
 </div>
 
-<div class="container hidden-lg hidden-md">
+<div ng-app="BlvdiaApp" ng-controller="BlvdiaCtrl" class="container hidden-lg hidden-md">
     <div class="row">
         <div class="col-xs-12">
             <img src="/img/blvdia-banner.png" class="img-responsive" alt="BLVDIA">
         </div>
     </div>
-    <div class="welcome"><span>Welcome to the</span><br>#BLVDIA passport office</div>
-    <p>Declare and share your proof of citizenship to our country within a country.</p>
-    <p>No oaths are required; simply choose from one of the six stations and enter the code from that station to begin.</p>
-    <input type="text" class="form-control">
-    <button class="btn btn-block margin-top">Get Started</button>
+    <div ng-show="!armed">
+        <div class="welcome"><span>Welcome to the</span><br>#BLVDIA passport office</div>
+        <p>Declare and share your proof of citizenship to our country within a country.</p>
+        <p>No oaths are required; simply choose from one of the six stations and enter the code from that station to begin.</p>
+        <p class="bad-password" ng-show="badPassword">Bad Code</p>
+        <input type="text" class="form-control" ng-model="code" ng-change="badPassword = false">
+        <button class="btn btn-block margin-top" ng-click="getStarted()">Get Started</button>
+    </div>
+    <div ng-show="armed">
+        <p>You're good to go!</p>
+    </div>
 </div>
 
 @stop

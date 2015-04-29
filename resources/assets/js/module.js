@@ -1,1 +1,1 @@
-console.log('module');
+angular.module('BlvdiaApp', []);
