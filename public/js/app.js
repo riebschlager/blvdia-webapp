@@ -37,6 +37,7 @@ angular.module('BlvdiaApp')
                     if (obj.code === $scope.code) {
                         condition = true;
                         camera = cameras[index];
+                        document.getElementById('code').blur();
                     }
                 });
                 return condition;
