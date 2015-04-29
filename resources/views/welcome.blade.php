@@ -35,7 +35,6 @@ Welcome to Boulevardia
         <p>Declare and share your proof of citizenship to our country within a country.</p>
         <p>No oaths are required; simply choose from one of the six stations and enter the code from that station to begin.</p>
         <input type="text" class="form-control" id="code" ng-model="code" ng-change="checkPassword()">
-        <button class="btn btn-block margin-top" ng-click="armed = true" ng-show="checkPassword()">Get Started</button>
     </div>
     <div ng-show="checkPassword()">
         <p>You're good to go!</p>
