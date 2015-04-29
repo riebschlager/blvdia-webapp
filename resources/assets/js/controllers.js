@@ -1,51 +1,42 @@
 angular.module('BlvdiaApp')
     .controller('BlvdiaCtrl', ['$scope', '$log',
         function ($scope, $log) {
-            var codes = ['0', '1', '2', '3', '4', '5'];
+            var camera = {};
             var cameras = [{
                 name: 'One',
                 id: 0,
-                code: '0'
+                code: '1'
             }, {
                 name: 'Two',
                 id: 1,
-                code: '1'
+                code: '2'
             }, {
                 name: 'Three',
                 id: 2,
-                code: '2'
+                code: '3'
             }, {
                 name: 'Four',
                 id: 3,
-                code: '3'
+                code: '4'
             }, {
                 name: 'Five',
                 id: 4,
-                code: '4'
+                code: '5'
             }, {
                 name: 'Six',
                 id: 5,
-                code: '5'
+                code: '6'
             }];
             $scope.armed = false;
             $scope.checkPassword = function () {
-                var isPasswordGood = false;
-                _.each(cameras, function (camera, index) {
-                    if (camera.code === $scope.code) {
-                        isPasswordGood = true;
-                        $scope.camera = cameras[index];
+                var condition = false;
+                _.each(cameras, function (obj, index) {
+                    if (obj.code === $scope.code) {
+                        condition = true;
+                        camera = cameras[index];
                     }
                 });
-                return isPasswordGood;
-            };
-            $scope.getStarted = function () {
-                if (codes.indexOf($scope.code) > -1) {
-                    $scope.camera = codes.indexOf($scope.code);
-                    $scope.armed = true;
-                } else {
-                    $scope.badPassword = true;
-                    $scope.code = '';
-                }
+                return condition;
             };
         }
     ]);
