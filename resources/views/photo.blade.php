@@ -8,7 +8,6 @@
 <meta property="og:image:user_generated" content="true">
 <meta property="og:image:type" content="image/gif">
 <meta property="og:site_name" content="Boulevardia">
-<meta property="og:profile_id" content="275047752643717">
 @stop
 
 @section('title')
