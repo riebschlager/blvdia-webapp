@@ -6,7 +6,8 @@ elixir(function (mix) {
     mix.scripts([
     'jquery/dist/jquery.min.js',
     'angular/angular.min.js',
-    'underscore/underscore-min.js'
+    'underscore/underscore-min.js',
+    'socket.io-client/socket.io.js'
     ], 'public/js/vendor.js', 'resources/lib');
 
     mix.scripts([

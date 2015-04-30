@@ -31,13 +31,26 @@ Welcome to Boulevardia
         </div>
     </div>
     <div ng-show="!checkPassword()">
-        <div class="welcome"><span>Welcome to the</span><br>#BLVDIA passport office</div>
-        <p>Declare and share your proof of citizenship to our country within a country.</p>
-        <p>No oaths are required; simply choose from one of the six stations and enter the code from that station to begin.</p>
-        <input type="text" class="form-control" id="code" ng-model="code" ng-change="checkPassword()">
+        <div class="welcome">
+            <div class="line-1">Welcome to the</div>
+            <div class="line-2">#BLVDIA passport office</div>
+        </div>
+        <div class="intro-copy">
+            <p>Declare and share your proof of citizenship to our country within a country.</p>
+            <p>No oaths are required; simply choose from one of the six stations and enter the code from that station to begin.</p>
+        </div>
+        <input type="text" pattern="\d*" ng-click="clearPlaceholder()" autocomplete="off" placeholder="Enter Code" class="form-control" id="code" ng-model="code" ng-change="checkPassword()">
     </div>
     <div ng-show="checkPassword()">
-        <p>You're good to go!</p>
+        <div class="welcome">
+            <div class="line-1">Passport Station</div>
+            <div class="line-2">@{{camera.name}}</div>
+        </div>
+        <div class="intro-copy text-center">
+            <p>Strike a pose and prepare for your picture.</p>
+        </div>
+        <button class="btn btn-block" ng-click="go()" ng-hide="isSnapping">TAKE PHOTO</button>
+        <p ng-bind="status"></p>
     </div>
 </div>
 

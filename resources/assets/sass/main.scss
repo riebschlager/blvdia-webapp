@@ -10,30 +10,55 @@ html, body {
 }
 
 p {
+  font-family: "franklin-gothic-urw-cond";
   color: #956a25;
   font-size: 16px;
 }
 
+input {
+  font-family: "brandon-grotesque";
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.intro-copy {
+  margin: 15px;
+}
+
+p {
+  letter-spacing: 1px;
+}
+
 .btn {
+  font-family: "brandon-grotesque";
   text-transform: uppercase;
   background-color: #05674e;
   border: 2px solid #0092a7;
   color: #e0c393;
+  padding-top: 15px;
+  padding-bottom: 15px;
   &:hover {
     color: #e0c393;
   }
 }
 
 .welcome {
+  font-family: "brandon-grotesque";
+  margin-top: 30px;
+  font-weight: 700;
   text-transform: uppercase;
   background-color: #0092a7;
   text-align: center;
-  color: #f5e3be;
-  font-size: 26px;
-  margin-top: 15px;
-  margin-bottom: 30px;
-  span {
+  color: #e0c393;
+  padding-top: 8px;
+  padding-bottom: 5px;
+  .line-1 {
     font-size: 16px;
+    line-height: 16px;
   }
-  padding: 5px;
+  .line-2 {
+    font-size: 24px;
+    line-height: 24px;
+    padding-top: 5px;
+  }
 }
