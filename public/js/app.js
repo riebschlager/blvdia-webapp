@@ -1,8 +1,8 @@
 angular.module('BlvdiaApp', []);
 
 angular.module('BlvdiaApp')
-    .controller('BlvdiaCtrl', ['$scope', '$log',
-        function ($scope, $log) {
+    .controller('BlvdiaCtrl', ['$scope', '$log', '$http',
+        function ($scope, $log, $http) {
             document.getElementById('code').focus();
             var socket = io('http://blvdia.herokuapp.com:80/');
             var clientId = '';
@@ -44,6 +44,14 @@ angular.module('BlvdiaApp')
                     console.log('complete', msg);
                     $scope.$apply(function () {
                         $scope.status = 'Done!';
+                        var params = {
+                            url: msg.url,
+                            uid: clientId
+                        };
+                        $http.post('/photo', params).success(function (res) {
+                            $log.debug(res);
+                            window.location.assign(res.success);
+                        });
                     });
                 }
             });

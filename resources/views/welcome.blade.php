@@ -46,11 +46,11 @@ Welcome to Boulevardia
             <div class="line-1">Passport Station</div>
             <div class="line-2">@{{camera.name}}</div>
         </div>
-        <div class="intro-copy text-center">
+        <div ng-hide="isSnapping" class="intro-copy text-center">
             <p>Strike a pose and prepare for your picture.</p>
         </div>
         <button class="btn btn-block" ng-click="go()" ng-hide="isSnapping">TAKE PHOTO</button>
-        <p ng-bind="status"></p>
+        <p ng-bind="status" class="status text-center"></p>
     </div>
 </div>
 

@@ -4,6 +4,8 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+use App\Photo;
 
 class PhotoController extends Controller {
 
@@ -32,9 +34,15 @@ class PhotoController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(Request $request)
 	{
-		//
+		$photo = new Photo();
+		$photo->uid = $request->input('uid');
+		$photo->url = $request->input('url');
+		$photo->save();
+
+		$url = url('/photo') . '/' . $request->input('uid');
+		return response()->json(['success' => $url]);
 	}
 
 	/**
@@ -45,7 +53,8 @@ class PhotoController extends Controller {
 	 */
 	public function show($id)
 	{
-		//
+		$photo = Photo::where('uid','=',$id)->firstOrFail();
+		return view('photo')->with('photo', $photo);
 	}
 
 	/**
