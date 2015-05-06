@@ -46,6 +46,9 @@ Welcome to Boulevardia
             <div class="line-1">Passport Station</div>
             <div class="line-2">@{{camera.name}}</div>
         </div>
+        <div ng-show="preview != '' && !isSnapping">
+            <img class="img-responsive" src="" ng-src="@{{preview}}" alt="">
+        </div>
         <div ng-hide="isSnapping" class="intro-copy text-center">
             <p>Strike a pose and prepare for your picture.</p>
         </div>

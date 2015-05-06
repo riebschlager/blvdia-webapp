@@ -1,12 +1,20 @@
 angular.module('BlvdiaApp', []);
 
 angular.module('BlvdiaApp')
-    .controller('BlvdiaCtrl', ['$scope', '$log', '$http',
-        function ($scope, $log, $http) {
+    .controller('BlvdiaCtrl', ['$scope', '$log', '$http', '$interval',
+        function ($scope, $log, $http, $interval) {
             document.getElementById('code').focus();
             var socket = io('http://blvdia.herokuapp.com:80/');
             var clientId = '';
             $scope.camera = {};
+            $scope.preview = '';
+            $interval(function () {
+                if (!$scope.isSnapping) {
+                    socket.emit('preview', {
+                        cameraId: $scope.camera.id
+                    });
+                }
+            }, 1000);
             var cameras = [{
                 name: 'Wheat',
                 id: 0,
@@ -32,6 +40,12 @@ angular.module('BlvdiaApp')
                 id: 5,
                 code: '6789'
             }];
+
+            socket.on('preview-complete', function (msg) {
+                if (msg.cameraId === $scope.camera.id) {
+                    $scope.preview = msg.url;
+                }
+            });
 
             socket.on('shutter', function (msg) {
                 if (msg.clientId === clientId) {
