@@ -15,6 +15,9 @@ elixir(function (mix) {
     'controllers.js'
     ], 'public/js/app.js', 'resources/assets/js');
 
+    mix.scripts([
+    'admin.js'], 'public/js/admin.js', 'resources/assets/js');
+
     mix.sass('main.scss', undefined, {
         outputStyle: 'compressed'
     });
