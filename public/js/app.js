@@ -14,7 +14,7 @@ angular.module('BlvdiaApp')
                         cameraId: $scope.camera.id
                     });
                 }
-            }, 1000);
+            }, 2000);
             var cameras = [{
                 name: 'Wheat',
                 id: 0,
