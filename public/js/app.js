@@ -9,14 +9,14 @@ angular.module('BlvdiaApp')
             $scope.camera = {};
             $scope.preview = '';
             $interval(function () {
-                if (!$scope.isSnapping) {
+                if (!$scope.isSnapping && $scope.checkPassword()) {
                     socket.emit('preview', {
                         cameraId: $scope.camera.id
                     });
                 }
             }, 2000);
             var cameras = [{
-                name: 'Wheat',
+                name: 'Unfiltered Wheat',
                 id: 0,
                 code: '1234'
             }, {
@@ -43,7 +43,9 @@ angular.module('BlvdiaApp')
 
             socket.on('preview-complete', function (msg) {
                 if (msg.cameraId === $scope.camera.id) {
-                    $scope.preview = msg.url;
+                    $scope.$apply(function () {
+                        $scope.preview = msg.url;
+                    });
                 }
             });
 
