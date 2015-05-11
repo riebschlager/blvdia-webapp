@@ -44,7 +44,7 @@ Welcome to Boulevardia
             <div class="line-1">Passport Station</div>
             <div class="line-2">@{{camera.name}}</div>
         </div>
-        <video src="{{$photo->url}}" autoplay="true" loop="true" id="passport-video"></video>
+        <video src="{{$photo->url}}" type="video/mp4" autoplay="true" loop="true" id="passport-video"></video>
         <button class="btn btn-block" ng-click="go()" ng-hide="isSnapping">TAKE PHOTO</button>
         <p ng-bind="status" class="status text-center"></p>
     </div>
