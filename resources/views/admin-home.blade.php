@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="container">
+    <button class="btn btn-xs btn-default" ng-click="deploy()">Deploy</button>
     <div class="row">
         <div class="col-sm-4">
             <h3>

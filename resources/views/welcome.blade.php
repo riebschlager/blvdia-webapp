@@ -47,7 +47,7 @@ Welcome to Boulevardia
             <div class="line-2">@{{camera.name}}</div>
         </div>
         <div ng-show="preview == ''">
-            <img src="http://placehold.it/640x480&amp;text=Generating%20Preview" alt="">
+            <img class="img-responsive" src="http://placehold.it/640x480&amp;text=Generating%20Preview" alt="">
         </div>
         <div ng-show="preview != '' && !isSnapping">
             <img class="img-responsive" src="" ng-src="@{{preview}}" alt="">

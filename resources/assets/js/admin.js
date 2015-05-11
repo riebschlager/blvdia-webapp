@@ -20,6 +20,14 @@ angular.module('Admin')
             }
           }
 
+          $scope.deploy = function() {
+            for (var i = 0; i < 6; i++) {
+              $scope.heartbeats[i].current = 0;
+              $scope.heartbeats[i].previous = 0;
+            }
+            socket.emit('deploy');
+          };
+
           $scope.preview = function(cameraId) {
             socket.emit('preview', {
               cameraId: cameraId
