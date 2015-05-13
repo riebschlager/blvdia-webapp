@@ -14,7 +14,7 @@ Welcome to Boulevardia
 <div class="container hidden-xs hidden-sm">
     <div class="row">
         <div class="col-xs-6 col-xs-offset-3">
-            <img src="/img/blvdia-banner.png" class="img-responsive" alt="BLVDIA">
+            <img src="/img/blvdia-banner.png" class="img-responsive blvdia-banner" alt="BLVDIA">
         </div>
     </div>
     <div class="row">
