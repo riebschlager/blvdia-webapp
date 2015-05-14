@@ -27,7 +27,7 @@ Welcome to Boulevardia
 <div ng-app="BlvdiaApp" ng-controller="BlvdiaCtrl" ng-cloak class="container hidden-lg hidden-md">
     <div class="row">
         <div class="col-xs-12">
-            <img src="/img/blvdia-banner.png" class="img-responsive" alt="BLVDIA">
+            <img src="/img/blvdia-banner.png" class="img-responsive blvdia-banner" alt="BLVDIA">
         </div>
     </div>
     <div ng-show="!checkPassword()">
@@ -46,17 +46,18 @@ Welcome to Boulevardia
             <div class="line-1">Passport Station</div>
             <div class="line-2">@{{camera.name}}</div>
         </div>
-        <div ng-show="preview == ''">
-            <img class="passport-preview" src="http://placehold.it/640x480&amp;text=Generating%20Preview" alt="">
+        <div class="preview" ng-show="preview == ''">
+            <img class="passport-preview" src="http://placehold.it/640x524/E2C99C/956a25/&amp;text=Generating%20Preview" alt="">
         </div>
-        <div ng-show="preview != '' && !isSnapping">
+        <div class="preview" ng-show="preview != '' && !isSnapping">
             <img class="passport-preview" src="" ng-src="@{{preview}}" alt="">
         </div>
+        <button class="btn btn-block" ng-click="go()" ng-hide="isSnapping">TAKE PHOTO</button>
         <div ng-hide="isSnapping" class="intro-copy text-center">
             <p>Strike a pose and prepare for your picture.</p>
         </div>
-        <button class="btn btn-block" ng-click="go()" ng-hide="isSnapping">TAKE PHOTO</button>
         <p ng-bind="status" class="status text-center"></p>
+        <p ng-if="processing" class="text-center"><img src="/img/loader.gif" alt=""></p>
     </div>
 </div>
 

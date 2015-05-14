@@ -64,7 +64,7 @@ angular.module('BlvdiaApp')
                 };
                 $http.post('/photo', params).success(function(res) {
                   $log.debug(res);
-                  window.location.assign(res.success);
+                  window.location.assign(res.success + '#?first');
                 });
               });
             }
@@ -77,6 +77,7 @@ angular.module('BlvdiaApp')
                 $scope.status = 'Snapping Photo ' + (msg.index + 1) + ' of 5.';
                 if (msg.index === 4) {
                   $scope.status = 'Processing. Gimme just one second!';
+                  $scope.processing = true;
                 }
               });
             }

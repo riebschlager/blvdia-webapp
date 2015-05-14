@@ -16,40 +16,34 @@ Welcome to Boulevardia
 @stop
 
 @section('scripts')
+<script src="/js/vendor.js"></script>
+<script src="/js/photo.js"></script>
 @stop
 
 @section('content')
 
-<div class="container hidden-xs hidden-sm">
+<div class="container" ng-app="blvdiaPhoto" ng-controller="photoController">
     <div class="row">
-        <div class="col-xs-6 col-xs-offset-3">
-            <img src="/img/blvdia-banner.png" class="img-responsive" alt="BLVDIA">
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+            <img src="/img/blvdia-banner.png" class="img-responsive blvdia-banner" alt="BLVDIA">
         </div>
-    </div>
-    <div class="row">
-        <div class="col-xs-6 col-xs-offset-3">
-            <p class="text-center">This is really more of a phone thing.</p>
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+            <img src="{{$photo->url}}" alt="" class="img-responsive margin-top">
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3" ng-if="first">
+            <button class="btn btn-primary btn-block" ng-click="restart()">Let's try that again</button>
+            <button class="btn btn-primary btn-block" ng-click="share()">Share photo</button>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3" ng-if="!first">
+            <p>Share your passport photo and declare your #BLVDIA citizenship.</p>
+            <div class="row">
+                <div class="col-xs-6"><button class="btn btn-primary btn-block margin-top">Facebook</button></div>
+                <div class="col-xs-6"><button class="btn btn-primary btn-block margin-top">Twitter</button></div>
+                <div class="col-xs-6"><button class="btn btn-primary btn-block margin-top">Email</button></div>
+                <div class="col-xs-6"><button class="btn btn-primary btn-block margin-top">SMS</button></div>
+            </div>
         </div>
     </div>
 </div>
-
-<div class="container hidden-lg hidden-md">
-    <div class="row">
-        <div class="col-xs-12">
-            <img src="/img/blvdia-banner.png" class="img-responsive" alt="BLVDIA">
-        </div>
-    </div>
-    <div ng-show="checkPassword()">
-        <div class="welcome">
-            <div class="line-1">Passport Station</div>
-            <div class="line-2">@{{camera.name}}</div>
-        </div>
-        <img src="{{$photo->url}}" alt="" class="img-responsive">
-        {{-- <video src="{{$photo->url}}" type="video/mp4" autoplay="true" loop="true" id="passport-video"></video> --}}
-        <button class="btn btn-block" ng-click="go()" ng-hide="isSnapping">TAKE PHOTO</button>
-        <p ng-bind="status" class="status text-center"></p>
-    </div>
-</div>
-
 
 @stop
