@@ -6,6 +6,9 @@
 <meta property="og:description" content="Hello from Boulevardia!" />
 <meta property="og:url" content="{{url('/')}}/photo/{{$photo->uid}}" />
 <meta property="og:video" content="{{url('/')}}/passport.swf?url={{urlencode($photo->url)}}" />
+<meta property="og:video:type" content="application/x-shockwave-flash">
+<meta property="og:video:width" content="640">
+<meta property="og:video:height" content="480">
 {{-- <meta property="og:image" content="{{$photo->url}}" /> --}}
 {{-- <meta property="og:image:user_generated" content="true"> --}}
 {{-- <meta property="og:image:type" content="image/gif"> --}}
