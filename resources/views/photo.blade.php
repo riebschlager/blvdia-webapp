@@ -9,9 +9,11 @@
 <meta property="og:video:type" content="application/x-shockwave-flash">
 <meta property="og:video:width" content="640">
 <meta property="og:video:height" content="480">
-{{-- <meta property="og:image" content="{{$photo->url}}" /> --}}
-{{-- <meta property="og:image:user_generated" content="true"> --}}
-{{-- <meta property="og:image:type" content="image/gif"> --}}
+<meta property="og:image" content="{{$photo->url}}" />
+<meta property="og:image:width" content="640">
+<meta property="og:image:height" content="480">
+<meta property="og:image:user_generated" content="true">
+<meta property="og:image:type" content="image/gif">
 <meta property="og:site_name" content="Boulevardia">
 @stop
 
