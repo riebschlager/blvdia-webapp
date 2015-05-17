@@ -36,6 +36,24 @@ Welcome to Boulevardia
 
 @section('content')
 
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '697793977033303',
+      xfbml      : true,
+      version    : 'v2.3'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
 <div class="container" ng-app="blvdiaPhoto" ng-controller="photoController">
     <div class="row">
         <div class="col-xs-12 col-sm-6 col-sm-offset-3">
@@ -51,10 +69,18 @@ Welcome to Boulevardia
         <div class="col-xs-12 col-sm-6 col-sm-offset-3" ng-if="!first">
             <p>Share your passport photo and declare your #BLVDIA citizenship.</p>
             <div class="row">
-                <div class="col-xs-6"><button class="btn btn-primary btn-block margin-top">Facebook</button></div>
-                <div class="col-xs-6"><button class="btn btn-primary btn-block margin-top">Twitter</button></div>
-                <div class="col-xs-6"><button class="btn btn-primary btn-block margin-top">Email</button></div>
-                <div class="col-xs-6"><button class="btn btn-primary btn-block margin-top">SMS</button></div>
+                <div class="col-xs-6">
+                    <a href="https://www.facebook.com/dialog/share?app_id=697793977033303&display=popup&href={{url('/')}}/photo/{{$photo->uid}}&redirect_uri={{url('/')}}/photo/{{$photo->uid}}" class="btn btn-primary btn-block margin-top">Facebook</a>
+                </div>
+                <div class="col-xs-6">
+                    <a class="btn btn-primary btn-block margin-top">Twitter</a>
+                </div>
+                <div class="col-xs-6">
+                    <a class="btn btn-primary btn-block margin-top">Email</a>
+                </div>
+                <div class="col-xs-6">
+                    <a class="btn btn-primary btn-block margin-top">SMS</a>
+                </div>
             </div>
         </div>
     </div>
