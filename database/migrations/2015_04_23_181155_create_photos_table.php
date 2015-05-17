@@ -17,6 +17,7 @@ class CreatePhotosTable extends Migration {
 			$table->increments('id');
 			$table->string('url');
 			$table->string('uid');
+			$table->boolean('featured')->default(0);
 			$table->timestamps();
 		});
 	}

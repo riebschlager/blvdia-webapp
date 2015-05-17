@@ -29,6 +29,16 @@ class PhotoController extends Controller {
 		//
 	}
 
+	public function allPhotos() {
+		$photos = Photo::paginate();
+		return response()->json($photos);
+	}
+
+	public function featuredPhotos() {
+		$photos = Photo::where('featured','=',TRUE)->paginate();
+		return response()->json($photos);
+	}
+
 	/**
 	 * Store a newly created resource in storage.
 	 *
