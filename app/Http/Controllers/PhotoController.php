@@ -1,11 +1,9 @@
 <?php namespace App\Http\Controllers;
 
-use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use App\Photo;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use App\Photo;
 
 class PhotoController extends Controller {
 
@@ -14,8 +12,7 @@ class PhotoController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function index()
-	{
+	public function index() {
 		return redirect('/');
 	}
 
@@ -24,8 +21,7 @@ class PhotoController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function create()
-	{
+	public function create() {
 		//
 	}
 
@@ -35,8 +31,22 @@ class PhotoController extends Controller {
 	}
 
 	public function featuredPhotos() {
-		$photos = Photo::where('featured','=',TRUE)->paginate();
+		$photos = Photo::where('featured', '=', TRUE)->paginate();
 		return response()->json($photos);
+	}
+
+	public function feature(Request $req) {
+		$photo = Photo::find($req['id'])->firstOrFail();
+		$photo->featured = TRUE;
+		$photo->save();
+		return 'success';
+	}
+
+	public function unfeature(Request $req) {
+		$photo = Photo::find($req['id'])->firstOrFail();
+		$photo->featured = FALSE;
+		$photo->save();
+		return 'success';
 	}
 
 	/**
@@ -44,8 +54,7 @@ class PhotoController extends Controller {
 	 *
 	 * @return Response
 	 */
-	public function store(Request $request)
-	{
+	public function store(Request $request) {
 		$photo = new Photo();
 		$photo->uid = $request->input('uid');
 		$photo->url = $request->input('url');
@@ -61,9 +70,8 @@ class PhotoController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
-	{
-		$photo = Photo::where('uid','=',$id)->firstOrFail();
+	public function show($id) {
+		$photo = Photo::where('uid', '=', $id)->firstOrFail();
 		return view('photo')->with('photo', $photo);
 	}
 
@@ -73,8 +81,7 @@ class PhotoController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function edit($id)
-	{
+	public function edit($id) {
 		//
 	}
 
@@ -84,8 +91,7 @@ class PhotoController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
-	{
+	public function update($id) {
 		//
 	}
 
@@ -95,8 +101,7 @@ class PhotoController extends Controller {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function destroy($id)
-	{
+	public function destroy($id) {
 		//
 	}
 
