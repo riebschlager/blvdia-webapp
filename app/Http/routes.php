@@ -3,6 +3,7 @@
 Route::get('/', 'WelcomeController@index');
 
 Route::get('admin', 'AdminController@index');
+Route::get('admin/photos', 'AdminController@photos');
 
 Route::resource('photo', 'PhotoController');
 

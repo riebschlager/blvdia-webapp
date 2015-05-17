@@ -19,6 +19,9 @@ elixir(function(mix) {
   'admin.js'], 'public/js/admin.js', 'resources/assets/js');
 
   mix.scripts([
+  'admin-photos.js'], 'public/js/admin-photos.js', 'resources/assets/js');
+
+  mix.scripts([
   'photo.js'], 'public/js/photo.js', 'resources/assets/js');
 
   mix.sass('main.scss', undefined, {

@@ -26,24 +26,24 @@ class PhotoController extends Controller {
 	}
 
 	public function allPhotos() {
-		$photos = Photo::paginate();
+		$photos = Photo::orderBy('id', 'desc')->paginate();
 		return response()->json($photos);
 	}
 
 	public function featuredPhotos() {
-		$photos = Photo::where('featured', '=', TRUE)->paginate();
+		$photos = Photo::where('featured', '=', TRUE)->orderBy('id', 'desc')->paginate();
 		return response()->json($photos);
 	}
 
 	public function feature(Request $req) {
-		$photo = Photo::find($req['id'])->firstOrFail();
+		$photo = Photo::where('id', '=', $req['id'])->firstOrFail();
 		$photo->featured = TRUE;
 		$photo->save();
 		return 'success';
 	}
 
 	public function unfeature(Request $req) {
-		$photo = Photo::find($req['id'])->firstOrFail();
+		$photo = Photo::where('id', '=', $req['id'])->firstOrFail();
 		$photo->featured = FALSE;
 		$photo->save();
 		return 'success';

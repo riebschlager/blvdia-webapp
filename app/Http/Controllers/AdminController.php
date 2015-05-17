@@ -22,6 +22,11 @@ class AdminController extends Controller {
 		return view('admin-home');
 	}
 
+	public function photos()
+	{
+		return view('admin-photos');
+	}
+
 	/**
 	 * Show the form for creating a new resource.
 	 *

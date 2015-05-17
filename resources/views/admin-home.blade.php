@@ -1,7 +1,7 @@
 @extends('admin')
 
 @section('content')
-<div class="container">
+<div class="container" ng-app="Admin" ng-controller="AdminCtrl">
     <button class="btn btn-xs btn-default" ng-click="deploy()">Deploy</button>
     <div class="row">
         <div class="col-sm-4">
@@ -90,4 +90,9 @@
         </div>
     </div>
 </div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.5/socket.io.min.js"></script>
+<script src="/js/admin.js"></script>
 @stop
