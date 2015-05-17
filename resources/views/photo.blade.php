@@ -16,6 +16,13 @@
 <meta property="og:image:user_generated" content="true">
 <meta property="og:image:type" content="image/gif">
 <meta property="og:site_name" content="Boulevardia">
+
+<meta name="twitter:card" content="photo" />
+<meta name="twitter:site" content="@blvdia" />
+<meta name="twitter:title" content="Hello from Boulevardia!" />
+<meta name="twitter:image" content="{{$photo->url}}" />
+<meta name="twitter:url" content="{{url('/')}}/photo/{{$photo->uid}}" />
+
 @stop
 
 @section('title')
