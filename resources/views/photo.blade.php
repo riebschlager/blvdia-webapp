@@ -5,6 +5,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:description" content="Hello from Boulevardia!" />
 <meta property="og:url" content="{{url('/')}}/photo/{{$photo->uid}}" />
+<meta property="og:video" content="{{url('/')}}/passport.swf?url={{urlencode($photo->url)}}" />
 <meta property="og:image" content="{{$photo->url}}" />
 <meta property="og:image:user_generated" content="true">
 <meta property="og:image:type" content="image/gif">
