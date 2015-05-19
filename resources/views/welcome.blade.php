@@ -19,7 +19,7 @@ Welcome to Boulevardia
     </div>
     <div class="row">
         <div class="col-xs-6 col-xs-offset-3">
-            <p class="text-center">This is really more of a phone thing.</p>
+            <p class="text-center margin-top">This is really more of a phone thing.</p>
         </div>
     </div>
 </div>
@@ -46,13 +46,12 @@ Welcome to Boulevardia
             <div class="line-1">Passport Station</div>
             <div class="line-2">@{{camera.name}}</div>
         </div>
-        <div class="preview" ng-show="preview == ''">
-            <img class="passport-preview" src="http://placehold.it/640x524/E2C99C/956a25/&amp;text=Generating%20Preview" alt="">
+        <div class="preview" ng-hide="isSnapping">
+            <img class="passport-preview" ng-src="@{{preview}}" src="http://placehold.it/640x524/E2C99C/956a25/&amp;text=Generating%20Preview" alt="">
         </div>
-        <div class="preview" ng-show="preview != '' && !isSnapping">
-            <img class="passport-preview" src="" ng-src="@{{preview}}" alt="">
+        <div>
+            <button class="btn btn-block" ng-click="go()" ng-hide="isSnapping">TAKE PHOTO</button>
         </div>
-        <button class="btn btn-block" ng-click="go()" ng-hide="isSnapping">TAKE PHOTO</button>
         <div ng-hide="isSnapping" class="intro-copy text-center">
             <p>Strike a pose and prepare for your picture.</p>
         </div>
