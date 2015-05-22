@@ -50,7 +50,7 @@ Welcome to Boulevardia
             <img class="passport-preview" ng-src="@{{preview}}" src="http://placehold.it/640x524/E2C99C/956a25/&amp;text=Generating%20Preview" alt="">
         </div>
         <div>
-            <button class="btn btn-block" ng-click="go()" ng-hide="isSnapping">TAKE PHOTO</button>
+            <button class="btn btn-block margin-top" ng-click="go()" ng-hide="isSnapping">TAKE PHOTO</button>
         </div>
         <div ng-hide="isSnapping" class="intro-copy text-center">
             <p>Strike a pose and prepare for your picture.</p>

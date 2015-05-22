@@ -63,7 +63,7 @@ Welcome to Boulevardia
             <img src="{{$photo->url}}" alt="" class="img-responsive margin-top">
         </div>
         <div class="col-xs-12 col-sm-6 col-sm-offset-3" ng-if="first">
-            <button class="btn btn-primary btn-block" ng-click="restart()">Let's try that again</button>
+            <button class="btn btn-primary btn-block btn-gold margin-top" ng-click="restart()">Let's try that again</button>
             <button class="btn btn-primary btn-block" ng-click="share()">Share photo</button>
         </div>
         <div class="col-xs-12 col-sm-6 col-sm-offset-3" ng-if="!first">
@@ -76,7 +76,7 @@ Welcome to Boulevardia
                     <a class="btn btn-primary btn-block margin-top">Twitter</a>
                 </div>
                 <div class="col-xs-6">
-                    <a class="btn btn-primary btn-block margin-top">Email</a>
+                    <a ng-href="mailto:?subject=My%20Boulevardia%20Passport%20Photo&body=Check%20out%20my%20Boulevardia%20passport%20photo!%20{{url('/')}}/photo/{{$photo->uid}}" class="btn btn-primary btn-block margin-top">Email</a>
                 </div>
                 <div class="col-xs-6">
                     <a class="btn btn-primary btn-block margin-top">SMS</a>

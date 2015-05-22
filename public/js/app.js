@@ -1,5 +1,7 @@
 angular.module('BlvdiaApp', []);
 
+'use strict';
+
 angular.module('BlvdiaApp')
     .controller('BlvdiaCtrl', ['$scope', '$log', '$http', '$interval',
         function($scope, $log, $http, $interval) {
@@ -78,7 +80,7 @@ angular.module('BlvdiaApp')
               $scope.$apply(function() {
                 $scope.status = 'Snapping Photo ' + (msg.index + 1) + ' of 5.';
                 if (msg.index === 4) {
-                  $scope.status = 'Processing. Gimme just one second!';
+                  $scope.status = 'Processing your photo. Gimme just a second!';
                   $scope.processing = true;
                 }
               });
