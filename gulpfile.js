@@ -24,6 +24,9 @@ elixir(function(mix) {
   mix.scripts([
   'photo.js'], 'public/js/photo.js', 'resources/assets/js');
 
+  mix.scripts([
+  'collage.js'], 'public/js/collage.js', 'resources/assets/js');
+
   mix.sass('main.scss', undefined, {
     outputStyle: 'compressed'
   });

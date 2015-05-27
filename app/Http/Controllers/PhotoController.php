@@ -25,6 +25,20 @@ class PhotoController extends Controller {
 		//
 	}
 
+	public function collage() {
+		return view('collage');
+	}
+
+	public function randomAll() {
+		$photos = Photo::orderBy(\DB::raw('RAND()'))->take(30)->get();
+		return response()->json($photos);
+	}
+
+	public function randomFeatured() {
+		$photos = Photo::where('featured', '=', TRUE)->orderBy(\DB::raw('RAND()'))->take(30)->get();
+		return response()->json($photos);
+	}
+
 	public function allPhotos() {
 		$photos = Photo::orderBy('id', 'desc')->paginate();
 		return response()->json($photos);
