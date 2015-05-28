@@ -35,6 +35,11 @@ input {
   text-align: center;
 }
 
+input.form-control {
+  font-size: 1.875em;
+  height: auto;
+}
+
 .intro-copy {
   margin: 15px;
 }
