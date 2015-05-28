@@ -79,7 +79,7 @@ Welcome to Boulevardia
                     <a href="" ng-href="mailto:?subject=My%20Boulevardia%20Passport%20Photo&body=Check%20out%20my%20Boulevardia%20passport%20photo!%20{{url('/')}}/photo/{{$photo->uid}}" class="btn btn-primary btn-block margin-top">Email</a>
                 </div>
                 <div class="col-xs-6">
-                    <a href="" ng-href="sms://?body=Check%20out%20my%20Boulevardia%20passport%20photo!%20{{url('/')}}/photo/{{$photo->uid}}" class="btn btn-primary btn-block margin-top">SMS</a>
+                    <a href="" ng-href="sms:?body=Check%20out%20my%20Boulevardia%20passport%20photo!%20{{url('/')}}/photo/{{$photo->uid}}" class="btn btn-primary btn-block margin-top">SMS</a>
                 </div>
             </div>
         </div>
