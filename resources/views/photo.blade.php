@@ -68,16 +68,16 @@ Welcome to Boulevardia
             <p>Share your passport photo and declare your #BLVDIA citizenship.</p>
             <div class="row">
                 <div class="col-xs-6">
-                    <a href="" ng-href="https://www.facebook.com/dialog/share?app_id=697793977033303&display=popup&href={{url('/')}}/photo/{{$photo->uid}}&redirect_uri={{url('/')}}/photo/{{$photo->uid}}" class="btn btn-primary btn-block margin-top">Facebook</a>
+                    <a ng-click="trackButton('facebook')" href="" ng-href="https://www.facebook.com/dialog/share?app_id=697793977033303&display=popup&href={{url('/')}}/photo/{{$photo->uid}}&redirect_uri={{url('/')}}/photo/{{$photo->uid}}" class="btn btn-primary btn-block margin-top">Facebook</a>
                 </div>
                 <div class="col-xs-6">
-                    <a target="_blank" href="" ng-href="https://twitter.com/intent/tweet?url={{url('/')}}/photo/{{$photo->uid}}" class="btn btn-primary btn-block margin-top">Twitter</a>
+                    <a ng-click="trackButton('twitter')" target="_blank" href="" ng-href="https://twitter.com/intent/tweet?url={{url('/')}}/photo/{{$photo->uid}}" class="btn btn-primary btn-block margin-top">Twitter</a>
                 </div>
                 <div class="col-xs-6">
-                    <a href="" ng-href="mailto:?subject=My%20Boulevardia%20Passport%20Photo&body=Check%20out%20my%20Boulevardia%20passport%20photo!%20{{url('/')}}/photo/{{$photo->uid}}" class="btn btn-primary btn-block margin-top">Email</a>
+                    <a ng-click="trackButton('email')" href="" ng-href="mailto:?subject=My%20Boulevardia%20Passport%20Photo&body=Check%20out%20my%20Boulevardia%20passport%20photo!%20{{url('/')}}/photo/{{$photo->uid}}" class="btn btn-primary btn-block margin-top">Email</a>
                 </div>
                 <div class="col-xs-6">
-                    <a href="" ng-href="sms:?body=Check%20out%20my%20Boulevardia%20passport%20photo!%20{{url('/')}}/photo/{{$photo->uid}}" class="btn btn-primary btn-block margin-top">SMS</a>
+                    <a ng-click="trackButton('sms')" href="" ng-href="sms:?body=Check%20out%20my%20Boulevardia%20passport%20photo!%20{{url('/')}}/photo/{{$photo->uid}}" class="btn btn-primary btn-block margin-top">SMS</a>
                 </div>
             </div>
         </div>
