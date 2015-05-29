@@ -8,6 +8,7 @@
 {{-- <meta property="og:url" content="{{url('/')}}/photo/{{$photo->uid}}">
  --}}<meta property="og:url" content="{{$photo->url}}">
 <meta property="og:image" content="{{$photo->url}}">
+<meta property="og:image:secure_url" content="{{$photo->url}}">
 <meta property="og:image:width" content="640">
 <meta property="og:image:height" content="480">
 <meta property="og:image:user_generated" content="true">
