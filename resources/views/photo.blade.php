@@ -3,7 +3,7 @@
 @section('og')
 <meta property="fb:app_id" content="697793977033303">
 <meta property="og:title" content="My BLVDIA Passport Photo">
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:description" content="Hello from Boulevardia!">
 <meta property="og:url" content="{{url('/')}}/photo/{{$photo->uid}}">
 <meta property="og:image" content="{{$photo->url}}">
