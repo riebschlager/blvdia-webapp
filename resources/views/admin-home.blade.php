@@ -75,7 +75,7 @@
                 <span ng-if="isAlive(5)" style="color:#0c0;">&bull;</span>
                 <span ng-if="!isAlive(5)" style="color:#c00;">&bull;</span>
             </h3>
-            <img class="img-responsive" ng-src="previewSrc[5]" src="http://placehold.it/640x480&amp;text=BLVDIA" alt="">
+            <img class="img-responsive" ng-src="{{previewSrc[5]}}" src="http://placehold.it/640x480&amp;text=BLVDIA" alt="">
             <div style="margin-top: 0.5em;">
                 <button class="btn btn-xs btn-default" ng-disabled="!isAlive(5)" ng-click="preview(5)">Preview</button>
                 <button class="btn btn-xs btn-default" ng-disabled="!isAlive(5)" ng-click="reboot(5)">Reboot</button>
