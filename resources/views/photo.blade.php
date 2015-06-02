@@ -19,7 +19,7 @@
 <meta name="twitter:site" content="@blvdia" />
 <meta name="twitter:title" content="Hello from Boulevardia!" />
 <meta name="twitter:image" content="{{$photo->url}}" />
-<meta name="twitter:url" content="{{url('/')}}/photo/{{$photo->uid}}" />
+{{-- <meta name="twitter:url" content="{{url('/')}}/photo/{{$photo->uid}}" /> --}}
 
 @stop
 
