@@ -22,7 +22,11 @@ class PhotoController extends Controller {
 	 * @return Response
 	 */
 	public function create() {
-		//
+	}
+
+	public function showPlayer($id) {
+		$photo = Photo::where('uid', '=', $id)->firstOrFail();
+		return view('player')->with('photo', $photo);
 	}
 
 	public function collage() {

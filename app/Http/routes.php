@@ -5,6 +5,7 @@ Route::get('/', 'WelcomeController@index');
 Route::get('admin', 'AdminController@index');
 Route::get('admin/photos', 'AdminController@photos');
 
+Route::get('player/{id}', 'PhotoController@showPlayer');
 Route::resource('photo', 'PhotoController');
 
 Route::get('/api/photos', 'PhotoController@allPhotos');
