@@ -24,6 +24,8 @@
 <meta name="twitter:player" content="{{url('/')}}/player/{{$photo->uid}}">
 <meta name="twitter:player:width" content="480">
 <meta name="twitter:player:height" content="360">
+<meta name="twitter:player:stream" content="{{$photo->url}}">
+<meta name="twitter:player:stream:content_type" content="image/gif">
 
 @stop
 
