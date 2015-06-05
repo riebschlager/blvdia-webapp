@@ -17,8 +17,17 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">BLVDIA</a>
+                <a class="navbar-brand" href="/admin">BLVDIA</a>
             </div>
+
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="/admin">Cameras</a>
+                </li>
+                <li>
+                    <a href="/admin/photos">Photos</a>
+                </li>
+            </ul>
 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
@@ -39,6 +48,6 @@
     </nav>
 
     @yield('content')
-    
+
 </body>
 </html>
