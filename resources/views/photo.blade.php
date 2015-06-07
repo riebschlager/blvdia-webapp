@@ -83,7 +83,7 @@ Welcome to Boulevardia
                 </div>
                 <div class="col-xs-12">
                 <p class="text-center margin-top">Your Passport Photo URL</p>
-                  <input type="text" class="form-control form-control-sm" onclick="this.focus(); this.setSelectionRange(0, 9999);" value="{{url('/') . '/photo/' . $photo->uid}}">
+                  <input readonly type="text" class="form-control form-control-sm" onclick="this.focus(); this.setSelectionRange(0, 9999);" value="{{url('/') . '/photo/' . $photo->uid}}">
                 </div>
                 {{-- <div class="col-xs-6">
                     <a ng-click="trackButton('sms')" href="" ng-href="sms:?body=Check%20out%20my%20Boulevardia%20passport%20photo!%20{{url('/')}}/photo/{{$photo->uid}}" class="btn btn-primary btn-block margin-top">SMS</a>
