@@ -40,6 +40,11 @@ input.form-control {
   height: auto;
 }
 
+input.form-control.form-control-sm {
+  font-size: 1em;
+  text-transform: none;
+}
+
 .intro-copy {
   margin: 15px;
 }
