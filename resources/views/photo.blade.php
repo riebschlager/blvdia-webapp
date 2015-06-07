@@ -7,6 +7,7 @@
 <meta property="og:description" content="Hello from Boulevardia!">
 {{-- <meta property="og:url" content="{{url('/')}}/photo/{{$photo->uid}}"> --}}
 <meta property="og:url" content="{{$photo->url}}">
+<meta property="og:secure_url" content="{{$photo->url}}">
 <meta property="og:image" content="{{$photo->url}}">
 <meta property="og:image:secure_url" content="{{$photo->url}}">
 <meta property="og:image:width" content="640">
