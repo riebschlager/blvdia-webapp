@@ -47,7 +47,7 @@ Welcome to Boulevardia
             <div class="line-2">@{{camera.name}}</div>
         </div>
         <div class="preview" ng-hide="isSnapping">
-            <img class="passport-preview" ng-src="@{{preview}}" src="http://placehold.it/640x524/E2C99C/956a25/&amp;text=Generating%20Preview" alt="">
+            <img class="passport-preview" ng-src="@{{preview}}" src="http://placehold.it/640x480/E2C99C/956a25/&amp;text=Generating%20Preview" alt="">
         </div>
         <div>
             <button class="btn btn-block margin-top" ng-click="go()" ng-hide="isSnapping">TAKE PHOTO</button>
