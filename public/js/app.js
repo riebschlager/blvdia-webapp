@@ -35,27 +35,27 @@ angular.module('BlvdiaApp')
             var cameras = [{
                 name: 'Unfiltered Wheat',
                 id: 0,
-                code: '1234'
+                code: '9550'
+            }, {
+                name: 'Bob\s 47',
+                id: 1,
+                code: '3281'
+            }, {
+                name: 'KC Pils',
+                id: 2,
+                code: '1912'
             }, {
                 name: 'Pale Ale',
-                id: 1,
-                code: '2345'
-            }, {
-                name: 'Bully Porter',
-                id: 2,
-                code: '3456'
-            }, {
-                name: 'Single Wide IPA',
                 id: 3,
-                code: '4567'
+                code: '2113'
             }, {
-                name: 'Love Child #5',
+                name: '80-Acre',
                 id: 4,
-                code: '5678'
+                code: '3214'
             }, {
-                name: 'Double Wide IPA',
+                name: 'Tank 7',
                 id: 5,
-                code: '6789'
+                code: '8825'
             }];
 
             socket.on('preview-complete', function(msg) {
