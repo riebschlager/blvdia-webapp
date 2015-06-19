@@ -31,27 +31,27 @@ angular.module('BlvdiaApp')
                 }
             }, 2000);
             var cameras = [{
-                name: 'Unfiltered Wheat',
+                name: 'Pale Ale',
                 id: 0,
                 code: '9550'
             }, {
-                name: 'Bob\s 47',
+                name: 'Bully! Porter',
                 id: 1,
                 code: '3281'
             }, {
-                name: 'KC Pils',
+                name: 'Tank 7',
                 id: 2,
                 code: '1912'
             }, {
-                name: 'Pale Ale',
+                name: 'Unfiltered Wheat',
                 id: 3,
                 code: '2113'
             }, {
-                name: '80-Acre',
+                name: 'Single-Wide IPA',
                 id: 4,
                 code: '3214'
             }, {
-                name: 'Tank 7',
+                name: 'Love Child No. 5',
                 id: 5,
                 code: '8825'
             }];
