@@ -74,7 +74,7 @@ Welcome to Boulevardia
             <div class="row">
                 <div class="col-xs-4">
                     <a ng-click="trackButton('facebook')" href=""
-                    ng-href="https://m.facebook.com/sharer/sharer.php?m2w&u={{url('/')}}/photo/{{$photo->uid}}" class="btn btn-primary btn-block margin-top"><img width="30" height="30" src="/img/icon-facebook.png" alt=""></a>
+                    ng-href="https://www.facebook.com/sharer/sharer.php?m2w&u={{url('/')}}/photo/{{$photo->uid}}" class="btn btn-primary btn-block margin-top"><img width="30" height="30" src="/img/icon-facebook.png" alt=""></a>
                 </div>
                 <div class="col-xs-4">
                     <a ng-click="trackButton('twitter')" target="_blank" href="" ng-href="https://twitter.com/intent/tweet?url={{url('/')}}/photo/{{$photo->uid}}" class="btn btn-primary btn-block margin-top"><img width="30" height="30" src="/img/icon-twitter.png" alt=""></a>
