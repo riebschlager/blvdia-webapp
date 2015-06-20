@@ -13,11 +13,11 @@ app.controller('CollageController', ['$scope', '$http', '$location', '$log', '$i
             $http.get(url).then(function(res) {
                 $scope.images = res.data;
             });
-            $interval(function() {
-                $http.get(url).then(function(res) {
-                    $scope.images = res.data;
-                });
-            }, 60 * 1000);
+            // $interval(function() {
+            //     $http.get(url).then(function(res) {
+            //         $scope.images = res.data;
+            //     });
+            // }, 60 * 1000);
         }
         init();
     }
